@@ -1,14 +1,18 @@
-alice_in_wonderland = '"Would you tell me, please, which way I ought to go from here?"\n"That depends a good deal on where you want to get to," said the Cat.\n"I don\'t much care where ——" said Alice.\n"Then it doesn\'t matter which way you go," said the Cat.\n"—— so long as I get somewhere," Alice added as an explanation.\n"Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."'
+alice_in_wonderland = '''"Would you tell me, please, which way I ought to go from here?"
+"That depends a good deal on where you want to get to," said the Cat.
+"I don\'t much care where ——" said Alice.
+"Then it doesn\'t matter  which way you go," said the Cat.
+"—— so long as I get somewhere," Alice added as an explanation.
+"Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."'''
 # task 01 == Розділіть змінну alice_in_wonderland так, щоб вона займала декілька фізичних лінії
 # task 02 == Знайдіть та відобразіть всі символи одинарної лапки (') у тексті
 # task 03 == Виведіть змінну alice_in_wonderland на друк
 
-# task 01, 02 == використовуючи знак зворотнього слешу '\' - зекранували три одинарні кавички в тексті змінної 'alice_in_wonderland'
+# task 01 - Використовуючи потрійні лапки розділив змінну alice_in_wonderland так, щоб вона займала декілька фізичних ліній
+# task 02 - використовуючи знак зворотнього слешу '\' - зекранували три одинарні кавички в тексті
+# task 03 == вивели на друк
 print('Task 01-03')
-print(alice_in_wonderland) # task 03 == вивели на друк
-
-
-
+print(alice_in_wonderland)
 
 """
     # Задачі 04 -10:
