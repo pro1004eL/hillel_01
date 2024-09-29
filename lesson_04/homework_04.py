@@ -57,20 +57,23 @@ print(f'У тексті літера "h" зустрічається: {chracter_h
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
 # Варіант 1: використав регулярне вираження
-condition1 = r'[A-Z]+'
+condition1 = r'\b[A-Z]+'
 match_list = re.findall(condition1, adwentures_of_tom_sawer)
 print('Task 05')
-print(f'У тексті {len(match_list)} слів починається з Великої літери.') # Використовуючи рег. вираження кількість слів: 14
+print(f'У тексті {len(match_list)} слів починається з Великої літери.') # виводимо кількість слів з Великої літери
 
 
 # Варіант 2: використав цикл 'for'
 words = adwentures_of_tom_sawer.split() # розділяємо рядок на частини
-capitalized_words = []
-for word in words:
-    if word[0].isupper():
-        capitalized_words.append(word)
-print(f'У тексті {len(capitalized_words)} слів починається з Великої літери.') # Виводить 13 слів з великої букви
-# пропускає слово "Big, так як індекс 0 це лапки... запитати Дениса
+capitalized_words = [] # створюємо пустий список для збереження кінцевого результату
+
+for word in words: # ітеруємо рядки за допомогою циклу for
+    word = word.lstrip('"') # обрізка лапок з початку рядка, так як не бачило слово "Big Missouri"
+    if word[0].isupper(): # вибираємо перший єлемент рядку
+        capitalized_words.append(word) # добавляємо рядки до кінцевого списку
+
+print(f'У тексті {len(capitalized_words)} слів починається з Великої літери.')
+
 
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
@@ -84,17 +87,13 @@ print(f'Позиція в тексті на якій слово "Tom" зустр
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-# розділяємо текст по кінцю речення:
-sentences = adwentures_of_tom_sawer.split('.')
-# створюємо пустий список для збереження результату:
-adwentures_of_tom_sawer_sentences = []
-# ітеруємо рядки за допомогою циклу for:
-for sentence in sentences:
-    # видаляємо зайві пробіли з початку та кінця кожного рядка:
-    cleaned_sentence = sentence.strip()
+
+sentences = adwentures_of_tom_sawer.split('.') # розділяємо текст по кінцю речення
+adwentures_of_tom_sawer_sentences = [] # створюємо пустий список для збереження результату
+for sentence in sentences: # ітеруємо речення за допомогою циклу for
+    cleaned_sentence = sentence.strip() # видаляємо зайві пробіли з початку та кінця кожного речення
     if cleaned_sentence:
-        # добавляємо рядки до кінцевого списку
-        adwentures_of_tom_sawer_sentences.append(cleaned_sentence)
+        adwentures_of_tom_sawer_sentences.append(cleaned_sentence) # добавляємо речення до кінцевого списку
 
 
 # task 08
@@ -108,8 +107,23 @@ print(sentence_four) # вивели четверте речення з adwenture
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
 """
-#
+starts_with_phrase = False
+
+for phrase in adwentures_of_tom_sawer_sentences: # перевіряємо кожне речення чи починається воно з "By the time"
+    if phrase.startswith('By the time'):
+        starts_with_phrase = True # якщо така фраза є, виводимо текст
+        print('Task 09')
+        print("В тексті змінної 'adwentures_of_tom_sawer_sentences' є речення яке починається з 'By the time'")
+# якщо сходження немає, виводимо помилку
+assert starts_with_phrase, "В тексті не має речення яке починається з 'By the time'"
 
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
+# 1. Знаходимо останнє речення, використовуючи індекс [-1]
+# 2. розділяємо речення на список слів, використовуючи функцію split()
+# 3. вираховуємо кількість слів за допомогою функції len()
+last_sentence = (len(adwentures_of_tom_sawer_sentences[-1].split()))
+print('Task 10')
+print(f'В останьому реченні змінної "adwentures_of_tom_sawer_sentences": {last_sentence} слів.')
+
