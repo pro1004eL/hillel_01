@@ -78,9 +78,30 @@ print(f'У тексті {len(capitalized_words)} слів починається
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
+# варіант 1
 tom_position2 = adwentures_of_tom_sawer.index('Tom', 1)
 print('Task 06')
 print(f'Позиція в тексті на якій слово "Tom" зустрічається вдруге: {tom_position2}')
+
+# варіант 2
+name = "Tom" # визначаємо яке слово будемо шукати
+
+occurrences = [] # створюємо пустий список для збереження індексу
+
+# використовуємо цикл for для знаходження всіх індексів де є слово 'Tom'
+for index in range(len(adwentures_of_tom_sawer)):
+    if adwentures_of_tom_sawer.startswith(name, index):
+        occurrences.append(index) # при знаходженні слова "Tom" в тексті, записуємо позицію в список 'occurances'
+
+# Отримуємо індекс, якщо імя "Том" в тексті знайдено вдруге
+if len(occurrences) > 1:
+    second_occurrence_position = occurrences[1]
+else:
+    # якщо другого сходження слова "Tom" немає, то повертаємо None
+    second_occurrence_position = None
+print(occurrences)
+print(f'Позиція в тексті на якій слово "Tom" зустрічається вдруге: {second_occurrence_position}')
+
 
 
 # task 07
@@ -111,11 +132,13 @@ starts_with_phrase = False
 
 for phrase in adwentures_of_tom_sawer_sentences: # перевіряємо кожне речення чи починається воно з "By the time"
     if phrase.startswith('By the time'):
-        starts_with_phrase = True # якщо така фраза є, виводимо текст
-        print('Task 09')
-        print("В тексті змінної 'adwentures_of_tom_sawer_sentences' є речення яке починається з 'By the time'")
-# якщо сходження немає, виводимо помилку
-assert starts_with_phrase, "В тексті не має речення яке починається з 'By the time'"
+        starts_with_phrase = True
+
+print('Task 09')
+if starts_with_phrase:  # якщо сходження є, виводимо текст
+    print("В тексті змінної 'adwentures_of_tom_sawer_sentences' є речення яке починається з 'By the time'")
+else: # якщо сходження немає, виводимо текст
+    print("В тексті не має речення яке починається з 'By the time''.")
 
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
