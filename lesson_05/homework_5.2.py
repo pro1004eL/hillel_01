@@ -32,24 +32,27 @@ people_records[1], people_records[5] = people_records[5], people_records[1]
 
 # print result
 print('Task 02')
-index = 0
 for item in people_records:
-  print(index, item) # for better visualization add new 'index' column
-  index += 1
+  print(item)
 
 # task 3
 # indexes to check age
 indexes_to_check_age = [6, 10, 13]
 
-# # Check if all people at the specified indexes have age >= 30
+# Check if all people at the specified indexes have age >= 30
+all_above_30 = True # Assume all ages are >= 30
+
+# Iterate over the list of indexes to check
 for index in indexes_to_check_age:
-  acceptable_people = people_records[index][2] >= 30
+    # Check if the age at the current index is less than 30
+    if people_records[index][2] < 30:
+        all_above_30 = False
 
 # Print the condition check result
 print('Task 3')
 
-if not acceptable_people:
+if not all_above_30: # print if not all people have age >= 30
   print('Not all people at the specified indexes have age >= 30')
-else:
+else: # if all people have age >= 30
     print('All people at the specified indexes have age >= 30')
 
