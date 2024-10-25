@@ -214,6 +214,6 @@ def suitable_cars(min_year, min_engine_volume, max_price):
         for car, color, year, engine_volume, car_type, price in sorted_by_price[:5]:
             print (f"{car}: {color}, {year}, {engine_volume}, {car_type}, {price}")
 
-print('Task 10')
-suitable_cars(2017, 1.6, 35000)
+#print('Task 10')
+#suitable_cars(2021, 3, 50000)
 
