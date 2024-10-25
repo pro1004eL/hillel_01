@@ -114,15 +114,85 @@ def convert_to_24_hour(time_str):
 #_____________________________________________________________________________
 # 1
 def capitalize_text(str):
-    if str is None:
-        assert AttributeError
+    if str == '':
+        raise AttributeError
     return str.title()
 
 
 # 2
-# def word_count(str):
-#     total_words = str.split()
-#     return len(total_words)
+def word_count(str):
+    total_words = str.split()
+    return len(total_words)
+
+# 3
+def concatenate_strings(lst):
+    concat_str = (' ').join(lst)
+    return concat_str
+
+# 4
+def string_methods(value, metod, *args):
+    if metod == 'upper':
+        return value.upper()
+    elif metod == 'lower':
+        return value.lower()
+    elif metod == 'startswith':
+        return value.startswith(*args)
+    elif metod == 'endswith':
+        return value.endswith(*args)
+    else:
+        raise ValueError('unsupported method')
+
+# 5
+def is_palindrome(str):
+
+    if type(str) == list:
+        raise TypeError
+
+    palindrome = str[::-1]
+    if str == palindrome:
+        return True
+    else:
+        return False
+
+# 6
+person_data = {
+    'person1': {'gender': 'Male', 'height': 175},
+    'person2': {'gender': 'Male', 'height': 185},
+    'person3': {'gender': 'Male', 'height': 195},
+    'person4': {'gender': 'Male', 'height': 165},
+    'person5': {'gender': 'Male', 'height': 170},
+    'person6': {'gender': 'Female', 'height': 165},
+    'person7': {'gender': 'Female', 'height': 155},
+    'person8': {'gender': 'Female', 'height': 170},
+    'person9': {'gender': 'Female', 'height': 170},
+    'person10': {'gender': 'Female', 'height': 164}
+}
+
+def mens_avr_height(person_dict):
+    mens_height = [value['height'] for value in person_dict.values() if value['gender'] == 'Male']
+
+    if not mens_height:
+        return 0
+    else:
+        return sum(mens_height) / len(mens_height)
+
+# 7
+journal_dict = [
+    {'name': 'Space', 'volume': 20000, 'price': 12.45},
+    {'name': 'SeaSide', 'volume': 5000, 'price': 10.45},
+    {'name': 'Fortune', 'volume': 10000, 'price': 17.99},
+    {'name': 'Vouge', 'volume': 25000, 'price': 7.68}
+]
+
+def average_jornal_price(dct):
+
+    item_price = [item['price'] for item in dct if item['volume'] > 10000]
+
+    if not item_price:
+        return 0
+    else:
+        return sum(item_price) / len(item_price)
+
 
 
 
