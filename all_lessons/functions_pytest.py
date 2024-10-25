@@ -1,9 +1,6 @@
+import logging
 
 # function 1
-# create a function to the homework 5.1
-# get cars that satisfy search criteria
-# Cars should be sorted by price ascending.
-# We should print up to five (5) first found elements
 
 car_data = {
   'Mercedes': ('silver', 2019, 1.8, 'sedan', 50000),
@@ -66,6 +63,13 @@ def matching_cars(min_year, min_engine_volume, max_price):
 
 # Function 2
 def find_primes(n: int) -> list:
+    logging.info(f'find_primes was called with {n}, {type(n)}')
+    logging.debug(f'find_primes was called with debug lvl {n}, {type(n)}')
+    logging.critical(f'find_primes was called with critical lvl {n}, {type(n)}')
+
+    if type != int:
+        logging.error(f'find_primes input param is not int {type(n)}, {n}')
+
     primes = []
     for num in range(2, n + 1):
         is_prime = True
