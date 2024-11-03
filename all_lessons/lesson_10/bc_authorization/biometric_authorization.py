@@ -18,9 +18,8 @@ user_data = {"id": 1, "name": "John", "second_name": "Doe", "age": 130}
 
 def biometric_authorization(database_users, users_data):
     for db_user in database_users:
-        if db_user['id'] == user_data['id']:
-            mismatches = sum(db_user[key] != users_data[key]
-                             for key in ['name', 'second_name', 'age'])
+        if db_user['id'] == users_data['id']:
+            mismatches = sum(db_user[key] != users_data[key] for key in ['name', 'second_name', 'age'])
 
             if mismatches == 0:
                 return "full-access"
