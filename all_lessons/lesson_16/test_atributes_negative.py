@@ -1,5 +1,5 @@
 import pytest
-from lesson_16.homework_16_1 import TeamLead
+from .homework_16_1 import TeamLead
 
 
 @pytest.mark.parametrize("name, salary, department, programming_language, team_size", [
