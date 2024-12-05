@@ -24,7 +24,7 @@ def analyze_heartbeat_log():
             except ValueError:
                 print(f"Error matching timestamp '{ts_str}' in line: {line.strip()}")
 
-    timestamps.sort()  # обовязково сортуємо timestamps!!!, щоб забезпечити хронологічний порядок
+    timestamps.sort()  # сортуємо timestamps, щоб забезпечити хронологічний порядок
 
 
     with open('hb_test.log', 'w') as log_file:
