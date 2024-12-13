@@ -2,7 +2,6 @@ from sql_alchemy_connection import session, Student
 
 
 
-
 def student_id_and_enrolled_courses(student_id=None):
 
     if student_id:

@@ -1,8 +1,8 @@
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Table
-from sqlalchemy.orm import relationship, declarative_base, sessionmaker
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship, declarative_base
 from all_lessons.lesson_22.db_sqlalhemy.tables.student_courses_relation_table import student_courses
 
-
+# Basic class
 Base = declarative_base()
 
 

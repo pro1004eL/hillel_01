@@ -2,6 +2,7 @@ from sql_alchemy_connection import session, Student
 
 
 
+
 def update_student(student_id, new_name=None, new_age=None):
 
     student = session.query(Student).filter_by(id=student_id).first()

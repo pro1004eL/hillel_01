@@ -1,9 +1,12 @@
-from sql_alchemy_connection import session, Student, Course, local_faker, choice, randint
+from sql_alchemy_connection import session, Student, Course
+from random import choice, randint
+from faker import Faker
+
+
+local_faker = Faker()
 
 
 
-
-# Create one student and assign courses manually
 def add_new_student(name, age, course_ids=None):
 
     student = Student(name=name, age=age)
