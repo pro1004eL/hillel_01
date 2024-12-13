@@ -263,7 +263,7 @@ def delete_student(student_id):
     else:
         print(f'Student with id: {student_id} not found')
 
-#delete_student(student_id=24)
+#delete_student(student_id=35)
 
 
 # delete students by condition
@@ -303,7 +303,7 @@ def delete_course(course_id):
     else:
         print(f'Course with id: {course_id} not found')
 
-#delete_course(course_id=20)
+#delete_course(course_id=26)
 
 
 
