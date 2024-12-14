@@ -1,10 +1,10 @@
-from sql_alchemy_connection import session, Student, Course
+from sql_alchemy_connection import session
+from all_lessons.lesson_22.db_sqlalhemy.tables.course_students_tables import Student, Course
 from random import choice, randint
 from faker import Faker
 
 
 local_faker = Faker()
-
 
 
 def add_new_student(name, age, course_ids=None):
@@ -25,7 +25,7 @@ def add_new_student(name, age, course_ids=None):
 
     print(f'Student {student.name} created successfully with courses: {[course.title for course in student.courses]}')
 
-#add_new_student('Tom Cruse', 19, course_ids=[2, 5])
+add_new_student('Eric Lassard', 33, course_ids=[1, 3, 6])
 
 
 # Create 20 random students and randomly assign courses[1-3]
@@ -47,4 +47,4 @@ def add_new_students(num):
     session.commit()
     print('Students created successfully!')
 
-#add_new_students(2)
+add_new_students(6)

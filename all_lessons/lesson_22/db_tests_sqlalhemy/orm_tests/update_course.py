@@ -15,6 +15,6 @@ def update_course(course_id, new_title):
     else:
         print(f'Course with id: {course_id} not found')
 
-#update_course(course_id=4, new_title="Advanced Mathematics")
+update_course(course_id=6, new_title='DBeaver')
 
 

@@ -2,7 +2,6 @@ from sql_alchemy_connection import session, Course
 
 
 
-# delete a course by id
 def delete_course(course_id):
 
     course = session.query(Course).filter_by(id=course_id).first()
@@ -16,4 +15,4 @@ def delete_course(course_id):
     else:
         print(f'Course with id: {course_id} not found')
 
-#delete_course(course_id=20)
+delete_course(course_id=5)

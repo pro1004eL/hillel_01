@@ -13,13 +13,13 @@ def course_id_and_their_enrolled_students(course_id=None):
             if course.students:
 
                 for student in course.students:
-                    print(f'  - Student: {student.name}, Age: {student.age}')
+                    print(f' - Student: {student.name}, Age: {student.age}')
             else:
-                print('  - No students enrolled')
+                print(' - No students enrolled')
         else:
             print(f'No course found with ID: {course_id}.')
 
-#course_and_their_enrolled_students(course_id=2)
+course_id_and_their_enrolled_students(course_id=2)
 
 
 
@@ -33,14 +33,14 @@ def course_title_and_their_enrolled_students(course_title=None):
         if specific_course.students:
 
             for student in specific_course.students:
-                print(f'  - {student.name}, Age: {student.age}')
+                print(f' - {student.name}, Age: {student.age}')
 
         else:
-            print('  - No students registered')
+            print(' - No students registered')
     else:
         print('Course not found')
 
-#course_title_and_their_enrolled_students('History')
+course_title_and_their_enrolled_students('Python')
 
 
 
@@ -52,10 +52,12 @@ def all_courses_and_their_enrolled_students():
         print(f"Course: {course.title}")
 
         if not course.students:
-            print("  - No students enrolled")
+            print(" - No students enrolled")
 
         else:
             for student in course.students:
-                print(f"  - Student: {student.name}, Age: {student.age}")
+                print(f" - Student: {student.name}, Age: {student.age}")
 
-#all_courses_and_their_enrolled_students()
+all_courses_and_their_enrolled_students()
+
+

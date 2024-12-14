@@ -1,7 +1,7 @@
 from sql_alchemy_connection import session, Student
 
 
-# delete a student by id
+
 def delete_student(student_id):
 
     student = session.query(Student).filter_by(id=student_id).first()
@@ -15,10 +15,10 @@ def delete_student(student_id):
     else:
         print(f'Student with id: {student_id} not found')
 
-delete_student(student_id=24)
+delete_student(student_id=15)
 
 
-# delete students by condition
+
 def delete_students_by_condition(condition):
 
     students_to_delete = session.query(Student).filter(condition).all()
@@ -26,8 +26,8 @@ def delete_students_by_condition(condition):
     if students_to_delete:
 
         for student in students_to_delete:
-            # Remove references in the association table
-            student.courses.clear()
+
+            student.courses.clear() # Remove references in the association table
 
         session.query(Student).filter(condition).delete(synchronize_session='fetch')
 
@@ -37,4 +37,4 @@ def delete_students_by_condition(condition):
     else:
         print('No students matched the condition.')
 
-#delete_students_by_condition(Student.age > 40)
+delete_students_by_condition(Student.age > 40)

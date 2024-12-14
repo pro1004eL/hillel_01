@@ -1,22 +1,31 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship, declarative_base
-from all_lessons.lesson_22.db_sqlalhemy.tables.student_courses_relation_table import student_courses
-
-# Basic class
-Base = declarative_base()
-
-
-class Student(Base):
-    __tablename__ = 'students'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String, nullable=False, unique=True)
-    age = Column(Integer)
-
-    # Relationship to courses
-    courses = relationship('Course', secondary=student_courses, back_populates='students')
-
-    def __str__(self):
-        return f'Student(id={self.id}, name={self.name}, age={self.age})'
-
-
-
+#
+# from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Table
+# from sqlalchemy.orm import relationship, declarative_base
+#
+# # Basic class
+# Base = declarative_base()
+#
+#
+# # Many-to-Many association table
+# student_courses = Table(
+#     'student_courses', Base.metadata,
+#     Column('student_id', Integer, ForeignKey('students.id'), primary_key=True),
+#     Column('course_id', Integer, ForeignKey('courses.id'), primary_key=True)
+# )
+#
+# class Student(Base):
+#     __tablename__ = 'students'
+#     id = Column(Integer, primary_key=True, autoincrement=True)
+#     name = Column(String, nullable=False, unique=True)
+#     age = Column(Integer)
+#
+#     # Relationship to courses
+#     courses = relationship('Course', secondary=student_courses, back_populates='students')
+#
+#     def __str__(self):
+#         return f'Student(id={self.id}, name={self.name}, age={self.age})'
+#
+#
+#
+#
+#
