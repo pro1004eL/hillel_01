@@ -1,0 +1,81 @@
+
+# 1. 'Logo' img-link on the Home page in the left-top nav menu
+a.header_logo
+
+# 2. 'Home' link on the Home page in the left-top nav menu
+//a[text()='Home']
+
+# 3. 'About' button on the Home page in the left-top nav menu
+div.header_left.d-flex.align-items-center > nav > button:nth-child(2)
+
+# 4. 'Contacts' button on the Home page in the left-top nav menu
+div.header_left.d-flex.align-items-center > nav > button:nth-child(3)
+
+
+# 5. 'Guest log in' button on the Home page in the right-top angle
+div.header_right.d-flex.align-items-center > button.header-link.-guest
+
+# 6. 'Garage' link on the 'Guest log in' page in the left nav menu
+div.col-3.d-none.d-lg-block.sidebar-wrapper > nav > a:nth-child(1)
+
+# 7. 'Fuel expenses' link on the 'Guest log in' page in the left nav menu
+div.col-3.d-none.d-lg-block.sidebar-wrapper > nav > a:nth-child(2)
+
+# 8. 'Instructions' link on the 'Guest log in' page in the left nav menu
+div.col-3.d-none.d-lg-block.sidebar-wrapper > nav > a:nth-child(3)
+
+# 9. 'Log out' button on the 'Guest log in' page in the left nav menu
+div.col-3.d-none.d-lg-block.sidebar-wrapper > nav > a:nth-child(4)
+
+
+# 10. 'Sign in' button on the Home page in the right-top angle
+div.header_right.d-flex.align-items-center > button.btn.btn-outline-white.header_signin
+
+# 11. 'Email' input field in the "Log in" pop-up on the Home page:
+#signinEmail
+
+# 12. 'Password' input field in the "Log in" pop-up:
+#signinPassword
+
+# 13. 'Remember me' checkbox in the "Log in" pop-up:
+#remember
+
+# 14. 'Forgot password' link in the "Log in" pop-up:
+div.form-group.d-flex.align-items-center.justify-content-between > button
+
+# 15. 'Login' button in the "Log in" pop-up:
+div.modal-footer.d-flex.justify-content-between > button.btn.btn-primary
+
+# 16. 'Close' button in the "Log in" pop-up:
+app-signin-modal > div.modal-header > button.close
+
+# 17. 'Registration' button in the "Log in" pop-up:
+div.modal-footer.d-flex.justify-content-between > button.btn.btn-link
+
+
+# 18. 'Name' input field in the "Registration" pop-up:
+#signupName
+
+# 19. 'LastName' input field in the "Registration" pop-up:
+#signupLastName
+
+# 20. 'signupEmail' input field in the "Registration" pop-up:
+#signupEmail
+
+# 21. 'signupPassword' input field in the "Registration" pop-up:
+#signupPassword
+
+# 22. 'signupRepeatPassword' input field in the "Registration" pop-up:
+#signupRepeatPassword
+
+# 23. 'close' button in the "Registration" pop-up:
+app-signup-modal > div.modal-header > button.close
+
+# 24. 'Register' button in the "Registration" pop-up:
+div.modal-footer > button.btn-primary
+
+
+# 25. 'Sign up' button on the Home page section hero
+div.hero-descriptor > button.hero-descriptor_btn.btn.btn-primary
+
+

@@ -1,0 +1,81 @@
+
+# 1. 'Logo' img-link on the Home page in the left-top nav menu
+//div[@class='header_left d-flex align-items-center']/a[@class='header_logo']
+
+# 2. 'Home' link on the Home page in the left-top nav menu
+//div[@class='header_left d-flex align-items-center']/nav/a[text()='Home']
+
+# 3. 'About' button on the Home page in the left-top nav menu
+//div[@class='header_left d-flex align-items-center']/nav/button[1]
+
+# 4. 'Contacts' button on the Home page in the left-top nav menu
+//div[@class='header_left d-flex align-items-center']/nav/button[2]
+
+
+# 5. 'Guest log in' button on the Home page in the right-top angle
+//div[@class='header_right d-flex align-items-center']/button[@class='header-link -guest']
+
+# 6. 'Garage' link on the 'Guest log in' page in the left nav menu
+//div[@class='header_left d-flex align-items-center']/nav/a[1]
+
+# 7. 'Fuel expenses' link on the 'Guest log in' page in the left nav menu
+//div[@class='header_left d-flex align-items-center']/nav/a[2]
+
+# 8. 'Instructions' link on the 'Guest log in' page in the left nav menu
+//div[@class='header_left d-flex align-items-center']/nav/a[3]
+
+# 9. 'Log out' button on the 'Guest log in' page in the left nav menu
+//div[@class='col-3 d-none d-lg-block sidebar-wrapper']/nav/a[4]
+
+
+# 10. 'Sign in' button on the Home page in the right-top angle
+//div[@class='header_right d-flex align-items-center']/button[@class='btn btn-outline-white header_signin']
+
+# 11. 'Email' input field in the "Log in" pop-up:
+//input[@id="signinEmail"]
+
+# 12. 'Password' input field in the "Log in" pop-up:
+//input[@id="signinPassword"]
+
+# 13. 'Remember me' checkbox in the "Log in" pop-up:
+//div[@class='form-check']/input[@id='remember']
+
+# 14. 'Forgot password' link in the "Log in" pop-up:
+//div[@class='form-group d-flex align-items-center justify-content-between']/button[@class='btn btn-link']
+
+# 15. 'Login' button in the "Log in" pop-up:
+//div[@class='modal-footer d-flex justify-content-between']/button[2]
+
+# 16. 'close' button in the "Log in" pop-up:
+//app-signin-modal/div[1]/button[@class='close']
+
+# 17. 'Registration' button in the "Log in" pop-up:
+//div[@class='modal-footer d-flex justify-content-between']/button[1]
+
+
+# 18. 'Name' input field in the "Registration" pop-up:
+//div[@class='form-group']/input[@id='signupName']
+
+# 19. 'LastName' input field in the "Registration" pop-up:
+//div[@class='form-group']/input[@id='signupLastName']
+
+# 20. 'signupEmail' input field in the "Registration" pop-up:
+//div[@class='form-group']/input[@id='signupEmail']
+
+# 21. 'signupPassword' input field in the "Registration" pop-up:
+//div[@class='form-group']/input[@id='signupPassword']
+
+# 22. 'signupRepeatPassword' input field in the "Registration" pop-up:
+//div[@class='form-group']/input[@id='signupRepeatPassword']
+
+# 23. 'close' button in the "Registration" pop-up:
+//ngb-modal-window/div/div/app-signup-modal/div/button[@class="close"]
+
+# 24. 'Register' button in the "Registration" pop-up:
+//ngb-modal-window/div/div/app-signup-modal/div/button[@class="btn btn-primary"]
+
+
+# 25. 'Sign up' button on the Home page section hero
+//div[@class='guest-layout']/app-home/section/div/div/div[1]/div/button[@class='hero-descriptor_btn btn btn-primary']
+
+
