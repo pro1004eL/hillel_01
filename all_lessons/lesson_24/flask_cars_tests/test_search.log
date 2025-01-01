@@ -1,0 +1,43 @@
+2024-12-29 13:42:39,699 - INFO - Positive test passed: sort_by=brand, limit=10: 
+[
+{"brand": "Acura", "engine_volume": 2.4, "price": 48000, "year": 2020},
+{"brand": "Audi", "engine_volume": 1.8, "price": 45000, "year": 2020},
+{"brand": "BMW", "engine_volume": 2.0, "price": 50000, "year": 2018},
+{"brand": "Bugatti", "engine_volume": 8.0, "price": 350000, "year": 2019},
+{"brand": "Chevrolet", "engine_volume": 1.8, "price": 28000, "year": 2018},
+{"brand": "Ferrari", "engine_volume": 6.3, "price": 250000, "year": 2021},
+{"brand": "Ford", "engine_volume": 2.2, "price": 32000, "year": 2015},
+{"brand": "Honda", "engine_volume": 1.6, "price": 30000, "year": 2016},
+{"brand": "Hyundai", "engine_volume": 1.6, "price": 29000, "year": 2020},
+{"brand": "Infiniti", "engine_volume": 3.5, "price": 52000, "year": 2019}
+]
+2024-12-29 13:42:39,701 - INFO - Positive test passed: sort_by=year, limit=3: 
+[
+{"brand": "Ford", "engine_volume": 2.2, "price": 32000, "year": 2015},
+{"brand": "Honda", "engine_volume": 1.6, "price": 30000, "year": 2016},
+{"brand": "Toyota", "engine_volume": 2.4, "price": 35000, "year": 2017}
+]
+2024-12-29 13:42:39,704 - INFO - Positive test passed: sort_by=engine_volume, limit=7: 
+[
+{"brand": "Tesla", "engine_volume": 0.0, "price": 80000, "year": 2020},
+{"brand": "Nissan", "engine_volume": 1.5, "price": 40000, "year": 2021},
+{"brand": "Honda", "engine_volume": 1.6, "price": 30000, "year": 2016},
+{"brand": "Hyundai", "engine_volume": 1.6, "price": 29000, "year": 2020},
+{"brand": "Audi", "engine_volume": 1.8, "price": 45000, "year": 2020},
+{"brand": "Chevrolet", "engine_volume": 1.8, "price": 28000, "year": 2018},
+{"brand": "BMW", "engine_volume": 2.0, "price": 50000, "year": 2018}
+]
+2024-12-29 13:42:39,706 - INFO - Positive test passed: sort_by=price, limit=5: 
+[
+{"brand": "Chevrolet", "engine_volume": 1.8, "price": 28000, "year": 2018},
+{"brand": "Hyundai", "engine_volume": 1.6, "price": 29000, "year": 2020},
+{"brand": "Honda", "engine_volume": 1.6, "price": 30000, "year": 2016},
+{"brand": "Kia", "engine_volume": 2.0, "price": 31000, "year": 2019},
+{"brand": "Ford", "engine_volume": 2.2, "price": 32000, "year": 2015}
+]
+2024-12-29 13:43:51,307 - INFO - Negative test passed: sort_by=pricqwe, limit=5: {'error': "Invalid 'sort_by' parameter"}
+2024-12-29 13:43:51,309 - INFO - Negative test passed: sort_by=price, limit=-1: {'error': "Invalid 'limit' parameter"}
+2024-12-29 13:43:51,311 - INFO - Negative test passed: sort_by=price, limit=: {'error': "Missing or invalid 'limit' parameter"}
+2024-12-29 13:43:51,314 - INFO - Negative test passed: sort_by=, limit=5: {'error': "Missing or invalid 'sort_by' parameter"}
+2024-12-29 13:43:51,317 - INFO - Negative test passed: sort_by=brand, limit=None: {'error': "Missing or invalid 'limit' parameter"}
+2024-12-29 13:43:51,319 - INFO - Negative test passed: sort_by=None, limit=None: {'error': "Missing or invalid 'sort_by' parameter"}
