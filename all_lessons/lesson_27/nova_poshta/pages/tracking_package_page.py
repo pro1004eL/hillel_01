@@ -10,6 +10,7 @@ class TrackingPackagePage(BasePage):
         self.url = settings.NOVA_POSHTA_SEARCH_NUM_URL
         self.locators = TrackingPackagePageLocators()
 
+
     def _package_num_input(self):
         return self._input_field(self.locators.package_number_input_locator,
                                  message='Can`t find number package input at Tracking Page')

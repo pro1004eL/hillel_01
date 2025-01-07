@@ -12,6 +12,10 @@ class BasePage:
         url = url or self.url
         self._driver.get(url)
 
+    def check_is_correct_url(self):
+        assert self._driver.current_url == self.url, (f'Expected url is {self.url}, '
+                                                      f'but actual url is {self._driver.current_url}')
+
     def _input_field(self, locator, timeout=1, message=''):
         return WebDriverWait(self._driver, timeout).until(
             EC.presence_of_element_located(locator), message=message)
