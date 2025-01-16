@@ -10,6 +10,8 @@ services:
       POSTGRES_HOST: pg_db
     # set port after starting DB
     command: postgres -c listen_addresses='*' -c port=5433
+    ports:
+      - "5433:5433"
 
   app:
     build:
