@@ -14,7 +14,7 @@ pipeline {
                     apt install -y python3-pip
                     rm -rf venv
                     apt install -y python3.11-venv
-                    python -m venv venv'''
+                    python3 -m venv venv'''
             }
         }
         stage('Install requirements') {
