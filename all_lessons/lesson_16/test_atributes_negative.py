@@ -1,7 +1,10 @@
 import pytest
+import allure
 from .homework_16_1 import TeamLead
 
 
+@allure.feature('mro_inherit')
+@pytest.mark.mro_inherit
 @pytest.mark.parametrize("name, salary, department, programming_language, team_size", [
     ('Dima', 12000, "", "Jawa", 4),
     ('Denis', 26500, None, "Python", 20),
